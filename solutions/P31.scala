@@ -14,7 +14,7 @@ object P31{
   def isPrimeRecursive(num: Int): Boolean = num match{
     case 1 => false
     case 2 => true
-    case _ => !((2 until num/2) exists (num%_ == 0))
+    case _ => !((2 until num/2+1) exists (num%_ == 0))
   }
   def main(args: Array[String]): Unit = {
     // prime number test
@@ -26,6 +26,7 @@ object P31{
 
     // non-prime number test
     println(isPrimeRecursive(1))
+    println(isPrimeRecursive(4))
     println(isPrimeRecursive(10))
     println(isPrimeRecursive(33))
     println(isPrimeRecursive(99))
